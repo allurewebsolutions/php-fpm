@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 
 
 RUN docker-php-ext-install soap
-RUN echo "mailhub=mailcatcher:1025\nUseTLS=NO\nFromLineOverride=YES" > /etc/ssmtp/ssmtp.conf
+RUN echo "mailhub=mailhog:1025\nUseTLS=NO\nFromLineOverride=YES" > /etc/ssmtp/ssmtp.conf
 
 CMD ["php-fpm"]
 
